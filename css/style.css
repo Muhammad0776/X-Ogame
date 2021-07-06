@@ -1,0 +1,120 @@
+.board table, .board {
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+body {
+  background-image: url("./../img/back.jpg");
+  background-size: cover;
+  background-position: top center;
+  min-height: 100vh;
+  padding: 40px 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+}
+
+.globe1 {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.globe2 {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+
+.globe3 {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+}
+
+.board {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(21, 23, 113, 0.4);
+  padding: 60px;
+  border: 5px solid #418af8;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 30px;
+}
+.board .title {
+  color: #418af8;
+}
+.board table {
+  margin: 70px auto 0;
+}
+.board table tr td {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+.board table tr td .x {
+  color: #418af8;
+}
+.board table tr td .o {
+  color: #59deff;
+}
+.board table tr:nth-child(1n) td:nth-child(1n) {
+  background-color: #dfe0fe;
+}
+.board table tr:nth-child(1n) td:nth-child(2n) {
+  background-color: white;
+}
+.board table tr:nth-child(2n) td:nth-child(1n) {
+  background-color: white;
+}
+.board table tr:nth-child(2n) td:nth-child(2n) {
+  background-color: #dfe0fe;
+}
+
+#myModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#myModal .my-modal-body {
+  max-width: 500px;
+  padding: 20px;
+  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 15px;
+  color: white;
+  font-weight: bold;
+  font-size: 40px !important;
+  text-align: center;
+  animation-name: zoomin;
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+#myModal .my-modal-body .btn {
+  font-size: 40px !important;
+}
+
+@keyframes zoomin {
+  0% {
+    transform: scale(0.5);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
